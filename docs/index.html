@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem vindo</title>
    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         :root {
@@ -32,56 +33,82 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         header h1 {
             color: var(--cor5);
             font-family: var(--fonte-destaque);
-            font-size: 5em;
+            font-size: 2.8em;
             text-shadow: 2px 2px 0px rgba(0,0,0,0.27);
             font-weight: normal;
-            margin-bottom: 90px;
+            margin-bottom: 10px;
         }
 
         header p {
             color: var(--cor5);
             font-family: var(--fonte-destaque);
-            font-size: 2em;
-            padding-bottom: 60px;
+            font-size: 1.3em;
         }
 
         nav {
             background-image: linear-gradient(to right, var(--cor3), var(--cor2), var(--cor3));
-            padding: 40px 70px;
+            padding: 20px;
             text-align: center;
             box-shadow: 3px 6px rgba(0,0,0,0.23);
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            border-radius: 15px 0px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
         }
 
         nav a {
             font-family: var(--fonte-orbitron);
-            margin: 20px;
-            padding: 15px 30px;
+            margin: 10px;
+            padding: 12px 25px;
             text-decoration: none;
             font-weight: bold;
-            color: var(--cor1);
-            transition: 0.5s;
+            color: var(--cor5);
+            transition: 0.3s;
             border-radius: 8px;
-            font-size: 2em;  
-            
+            background-color: rgba(255,255,255,0.05);
+            font-size: 1.2em;
+            flex: 1 1 auto;
+            text-align: center;
         }
 
         nav a:hover {
             color: var(--cor0);
             background-color: rgba(91,106,122,0.8);
+        }
+
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                font-size: 1em;
+                padding: 10px 15px;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
